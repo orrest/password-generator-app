@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "baseHref": "/password-generator-app/",
             "outputPath": "dist/password-generator-app",
             "browser": "src/main.ts",
             "polyfills": [
