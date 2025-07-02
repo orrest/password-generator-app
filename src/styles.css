@@ -132,6 +132,94 @@
   :target {
     scroll-margin-block: 5ex;
   }
+
+  /*https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/*/
+  input[type="range"] {
+    -webkit-appearance: none;
+    /*appearance: none;*/
+    background: transparent;
+    cursor: pointer;
+    padding-block: 10px; /* (thumb - track) / 2 */
+  }
+
+  /***** Track Styles *****/
+  /***** Chrome, Safari, Opera, and Edge Chromium *****/
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--color-grey-850);
+    border-radius: 2px;
+    height: 8px;
+    accent-color: #fb7c58;
+  }
+
+  /******** Firefox ********/
+  input[type="range"]::-moz-range-track {
+    background: var(--color-grey-850);
+    border-radius: 2px;
+    height: 8px;
+  }
+
+  /***** Thumb Styles *****/
+  /***** Chrome, Safari, Opera, and Edge Chromium *****/
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -10px; /* Centers thumb on the track */
+    background-color: var(--color-grey-200);
+    border-radius: 14px;
+    height: 28px;
+    width: 28px;
+  }
+
+  input[type="range"]:active::-webkit-slider-thumb {
+    background-color: var(--color-grey-850);
+    outline: var(--color-green-200) solid 2px;
+  }
+
+  /***** Thumb Styles *****/
+  /***** Firefox *****/
+  input[type="range"]::-moz-range-thumb {
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0; /*Removes default border-radius that FF applies*/
+    background-color: transparent;
+    height: 2rem;
+    width: 1rem;
+  }
+
+  /* checkbox baseline */
+  input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: transparent;
+    /* Not removed via appearance */
+    margin: 0;
+    padding: 0;
+
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-grey-200);
+
+    display: grid;
+    place-content: center;
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    transform: scale(0);
+    background: var(--color-green-200) url("/icon-check.svg") no-repeat center;
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+
+  input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+  }
 }
 
 @layer components {
