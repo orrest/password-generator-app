@@ -210,7 +210,7 @@
     width: 20px;
     height: 20px;
     transform: scale(0);
-    background: var(--color-green-200) url("/assets/icon-check.svg") no-repeat
+    background: var(--color-green-200) url("./assets/icon-check.svg") no-repeat
       center;
   }
 
