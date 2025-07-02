@@ -213,6 +213,11 @@
     background: var(--color-green-200) url("/icon-check.svg") no-repeat center;
   }
 
+  input[type="checkbox"]:hover {
+    border-color: var(--color-green-200);
+    cursor: pointer;
+  }
+
   input[type="checkbox"]:checked::before {
     transform: scale(1);
   }
