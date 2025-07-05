@@ -24,7 +24,7 @@ export class PasswordGenerator {
   password = signal<string>('P4$5W0rD!');
   copied = signal<boolean>(false);
 
-  charLength = signal<number>(10);
+  charLength = signal<number>(0);
 
   rules = signal<Rule[]>([
     { description: 'Include Uppercase Letters', checked: false },

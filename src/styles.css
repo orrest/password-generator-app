@@ -233,3 +233,29 @@
     @apply bg-grey-800;
   }
 }
+
+@layer utilities {
+  .preset-16-24 {
+    font-size: clamp(1rem, 0.0458rem + 4.0712vw, 2rem);
+    line-height: clamp(1.25rem, 0.5344rem + 3.0534vw, 2rem);
+    letter-spacing: 0;
+  }
+
+  .preset-24-32 {
+    font-size: clamp(1.5rem, 1.0229rem + 2.0356vw, 2rem);
+    line-height: clamp(2rem, 1.4036rem + 2.5445vw, 2.625rem);
+    letter-spacing: 0;
+  }
+
+  .preset-16-18 {
+    font-size: clamp(1rem, 0.8807rem + 0.5089vw, 1.125rem);
+    line-height: clamp(1.25rem, 1.0115rem + 1.0178vw, 1.5rem);
+    letter-spacing: 0;
+  }
+
+  .preset-18-24 {
+    font-size: clamp(1.125rem, 0.7672rem + 1.5267vw, 1.5rem);
+    line-height: clamp(1.5rem, 1.0229rem + 2.0356vw, 2rem);
+    letter-spacing: 0;
+  }
+}
